@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>reciver page</title>
+  </head>
+  <body>
+    <p id="info"></p>
+    <script type="text/javascript">
+      let url = decodeURI(window.location.href);
+      let data = url.split("?");
+      let dataParts = data[1].split("&");
+
+      let string = "Jag heter " + dataParts[0].split("=")[1] +
+                    " och jag gillar " + dataParts[1].split("=")[1];
+
+      document.getElementById("info").textContent = string;
+    </script>
+  </body>
+</html>
